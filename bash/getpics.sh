@@ -23,7 +23,9 @@ mkdir -p ~/public_html/pics || (echo "Failed to make a new pics directory" && ex
 wget -q -O ~/public_html/pics/pics.zip http://zonzorp.net/pics.zip && unzip -d ~/public_html/pics -o -q ~/public_html/pics/pics.zip && rm ~/public_html/pics/pics.zip
 
 #this line will download the files kept here: https://zonzorp.net/pics.tgz to the ~/public_html/pics directory and attempt to extract the archive if successful it will delete the original file
-wget -q -O ~/public_html/pics/pics.tgz https://zonzorp.net/pics.tgz && tar -xf ~/public_html/pics/pics.tgz -C ~/public_html/pics/ && rm ~/public_html/pics/pics.tgz
+wget -q -O ~/public_html/pics/pics.tgz https://zonzorp.net/pics.tgz &&
+  tar -xf ~/public_html/pics/pics.tgz -C ~/public_html/pics/ &&
+  rm ~/public_html/pics/pics.tgz
 
 # Task 1: Improve this script to also retrieve and install the files kept in the https://zonzorp.net/pics.tgz tarfile
 #     test to make sure the download and extraction commands work
