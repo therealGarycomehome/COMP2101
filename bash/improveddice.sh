@@ -19,5 +19,14 @@ echo "Rolling..."
 # roll the dice and save the results
 die1=$(( RANDOM % 6 + 1))
 die2=$(( RANDOM % 6 + 1 ))
+
+#calculating the sum of the dice and then saving it as a variable
+sum=$(($die1 + $die2))
+
+#calculating the average and then saving it as a variable
+Average=$(bc<<<"scale=1;$sum/2")
+
 # display the results
 echo "Rolled $die1, $die2"
+echo "Sum of the two dice, $sum"
+echo "Average of the two numbers rolled, $Average"
