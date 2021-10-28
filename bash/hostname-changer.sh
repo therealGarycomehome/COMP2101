@@ -16,7 +16,7 @@ newHostname="pc$studentNumber"
 # If that hostname is not already in the /etc/hosts file, change the old hostname in that file to the new name using sed or something similar and
 #     tell the user you did that
 #e.g. sed -i "s/$oldname/$newname/" /etc/hosts
-sudo sed -i "s/$currentHostname/$newHostname/" /etc/hostname &&
+sudo sed -i "s/$currentHostname/$newHostname/" /etc/hosts &&
   echo "/etc/hosts changed to reflect desired hostname" # I used sudo here because sed didnt have permissions to use the temp file it created causing an error
 
 # If that hostname is not the current hostname, change it using the hostnamectl command and
